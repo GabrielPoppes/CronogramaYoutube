@@ -51,18 +51,26 @@ namespace CronogramaYoutube
 
             else
             {
+                // Codificação para abrir nova tela
                 Logado = new Thread(FormLogado);
                 Logado.SetApartmentState(ApartmentState.STA);
+                // "this.Close() fecha a tela anterior, e mantém somente a nova aberta"
                 this.Close();
+                // Abre a nova tela
                 Logado.Start();
             }
 
             
         }
-
+        // Método para abrir a nova tela
         private void FormLogado()
         {
             Application.Run(new CronogramaLogado());
+        }
+
+        private void btn_senha_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
