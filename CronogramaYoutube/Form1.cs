@@ -28,6 +28,24 @@ namespace CronogramaYoutube
             Application.Exit();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (btn_login.Text == "" && btn_senha.Text == "")
+            {
+                MessageBox.Show("Por favor, insira os dados necessários para acessar o sistema!");
+            }
+
+            else if (btn_login.Text == "")
+            {
+                MessageBox.Show("Por favor, digite o usuário!");
+            }
+
+            else if (btn_senha.Text == "")
+            {
+                MessageBox.Show("Por favor, digite a senha!");
+            }
+
+            
+        }
     }
 }
