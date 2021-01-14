@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CronogramaYoutube
 {
     public partial class Form1 : Form
     {
+        // Thred da Tela "CronogramaLogado"
+        Thread Logado;
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace CronogramaYoutube
             Application.Exit();
         }
 
+        // Codificação do botão "ENTRAR", checa se os campos de login e senha estão preenchidos corretamente
         private void button1_Click(object sender, EventArgs e)
         {
             if (btn_login.Text == "" && btn_senha.Text == "")
@@ -45,7 +49,20 @@ namespace CronogramaYoutube
                 MessageBox.Show("Por favor, digite a senha!");
             }
 
+            else
+            {
+                Logado = new Thread(FormLogado);
+                Logado.SetApartmentState(ApartmentState.STA);
+                this.Close();
+                Logado.Start();
+            }
+
             
+        }
+
+        private void FormLogado()
+        {
+            Application.Run(new CronogramaLogado());
         }
     }
 }
