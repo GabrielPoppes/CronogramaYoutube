@@ -58,6 +58,8 @@ namespace CronogramaYoutube
                 this.Close();
                 // Abre a nova tela
                 Logado.Start();
+
+                
             }
 
             
