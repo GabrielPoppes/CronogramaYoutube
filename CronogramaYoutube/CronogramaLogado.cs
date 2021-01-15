@@ -30,6 +30,9 @@ namespace CronogramaYoutube
             Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 200).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 100).TextAlign = HorizontalAlignment.Center;
+
+            Lista.CheckBoxes = true;
+            Lista.MultiSelect = true;
         }
 
         // Botão "CADASTRAR"
@@ -46,7 +49,7 @@ namespace CronogramaYoutube
         }
 
         // Método para adicionar os items na List view
-        private void MetodoAddItem()
+        public void MetodoAddItem()
         {
             // Criando array
             string[] item = new string[5];
@@ -81,12 +84,12 @@ namespace CronogramaYoutube
         // método para limpar lista selecionando o item
         public void btn_limparlista_Click(object sender, EventArgs e)
         {
-            // Se tiver mais de zero itens adicionados na lista
-            if (Lista.Items.Count > 0)
+            foreach(ListViewItem item in Lista.Items)
             {
-                // deleta o item na posição 0 já vai todos (tanto da Lista quanto ListaID)
-                Lista.Items.Remove(Lista.SelectedItems[0]);
-                
+                if (item.Checked)
+                {
+                    Lista.Items.RemoveAt(item.Index);
+                }
             }
         }
 
