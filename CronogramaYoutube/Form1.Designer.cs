@@ -38,7 +38,9 @@ namespace CronogramaYoutube
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_senha = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -125,7 +127,16 @@ namespace CronogramaYoutube
             this.btn_senha.PasswordChar = '*';
             this.btn_senha.Size = new System.Drawing.Size(115, 22);
             this.btn_senha.TabIndex = 8;
-            this.btn_senha.TextChanged += new System.EventHandler(this.btn_senha_TextChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(152, 217);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(144, 140);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
@@ -133,6 +144,7 @@ namespace CronogramaYoutube
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_senha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -146,6 +158,7 @@ namespace CronogramaYoutube
             this.Text = "Cronograma Youtube";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,6 +173,7 @@ namespace CronogramaYoutube
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox btn_senha;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

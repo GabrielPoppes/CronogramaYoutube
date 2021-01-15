@@ -68,9 +68,5 @@ namespace CronogramaYoutube
             Application.Run(new CronogramaLogado());
         }
 
-        private void btn_senha_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
