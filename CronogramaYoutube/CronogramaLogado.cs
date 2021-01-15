@@ -17,6 +17,7 @@ namespace CronogramaYoutube
         public CronogramaLogado()
         {
             InitializeComponent();
+            // Método para gerar as colunas assim que a tela é aberta
             GerarColunas();
         }
 
@@ -24,17 +25,22 @@ namespace CronogramaYoutube
         private void GerarColunas()
         {
             // COLUNA DA LIST VIEW DO ID
-            ListaID.Columns.Add("ID", 50).TextAlign = HorizontalAlignment.Center;
+            ListaID.Columns.Add("", 50).TextAlign = HorizontalAlignment.Center;
             // COLUNA DA LIST VIEW DO RESTANTE
-            Lista.Columns.Add("DATA", 50).TextAlign = HorizontalAlignment.Center;
-            Lista.Columns.Add("HORA", 50).TextAlign = HorizontalAlignment.Center;
-            Lista.Columns.Add("TÍTULO DO VÍDEO", 230).TextAlign = HorizontalAlignment.Center;
-            Lista.Columns.Add("GRAVADO [S/N]", 100).TextAlign = HorizontalAlignment.Center;
+            Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
+            Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
+            Lista.Columns.Add("", 200).TextAlign = HorizontalAlignment.Center;
+            Lista.Columns.Add("", 100).TextAlign = HorizontalAlignment.Center;
         }
 
         // Botão "CADASTRAR"
         private void button2_Click(object sender, EventArgs e)
         {
+            if (dataTxt.Text == "" || horaTxt.Text == "" || tituloTxt.Text == "" || gravadoTxt.Text == "")
+            {
+                MessageBox.Show("Por favor, preencha todos os campos!");
+            }
+
             // método para adicionar items na List View
             MetodoAddItem();
 
@@ -51,25 +57,31 @@ namespace CronogramaYoutube
             // Criando array
             string[] item = new string[4];
 
-            // Add dados informados pelo user no array
-            item[0] = dataTxt.Text;
-            item[1] = horaTxt.Text;
-            item[2] = tituloTxt.Text;
-            item[3] = gravadoTxt.Text;
+            if (dataTxt.Text != "" && horaTxt.Text != "" && tituloTxt.Text != "" && gravadoTxt.Text != "")
+            {
+                // Lógica para implementar o contador da coluna "ID"
+                // Veja que o contador é = Total de itens na coluna ID + 1
+                // Na sequencia converto ele para string para ser implementado na coluna
+                // E assim repete o looping
+                int contadorID = ListaID.Items.Count + 1;
+                string contadorIDString = contadorID.ToString();
+                ListaID.Items.Add(new ListViewItem(contadorIDString));
 
-            // Passando array para o List view
-            Lista.Items.Add(new ListViewItem(item));
+                // Add dados informados pelo user no array
+                item[0] = dataTxt.Text;
+                item[1] = horaTxt.Text;
+                item[2] = tituloTxt.Text;
+                item[3] = gravadoTxt.Text;
 
-            // Limpar a List View
-            dataTxt.Clear();
-            horaTxt.Clear();
-            tituloTxt.Clear();
-            gravadoTxt.Clear();
+                // Passando array para o List view
+                Lista.Items.Add(new ListViewItem(item));
 
-            int contadorID = ListaID.Items.Count + 1;
-            string contadorIDString = contadorID.ToString();
-            ListaID.Items.Add(new ListViewItem(contadorIDString));
-
+                // Limpar a List View
+                dataTxt.Clear();
+                horaTxt.Clear();
+                tituloTxt.Clear();
+                gravadoTxt.Clear();
+            }
         }
 
         private void btn_limparlista_Click(object sender, EventArgs e)
