@@ -40,7 +40,6 @@ namespace CronogramaYoutube
             this.gravadoTxt = new System.Windows.Forms.TextBox();
             this.nada = new System.Windows.Forms.Label();
             this.btn_limparlista = new System.Windows.Forms.Button();
-            this.ListaID = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,9 +72,9 @@ namespace CronogramaYoutube
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_cadastrar.Location = new System.Drawing.Point(527, 162);
+            this.btn_cadastrar.Location = new System.Drawing.Point(578, 137);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(166, 21);
+            this.btn_cadastrar.Size = new System.Drawing.Size(204, 21);
             this.btn_cadastrar.TabIndex = 3;
             this.btn_cadastrar.Text = "CADASTRAR";
             this.btn_cadastrar.UseVisualStyleBackColor = false;
@@ -95,28 +94,28 @@ namespace CronogramaYoutube
             // 
             // dataTxt
             // 
-            this.dataTxt.Location = new System.Drawing.Point(80, 162);
+            this.dataTxt.Location = new System.Drawing.Point(131, 163);
             this.dataTxt.Name = "dataTxt";
             this.dataTxt.Size = new System.Drawing.Size(64, 20);
             this.dataTxt.TabIndex = 5;
             // 
             // horaTxt
             // 
-            this.horaTxt.Location = new System.Drawing.Point(141, 162);
+            this.horaTxt.Location = new System.Drawing.Point(192, 163);
             this.horaTxt.Name = "horaTxt";
             this.horaTxt.Size = new System.Drawing.Size(62, 20);
             this.horaTxt.TabIndex = 6;
             // 
             // tituloTxt
             // 
-            this.tituloTxt.Location = new System.Drawing.Point(200, 162);
+            this.tituloTxt.Location = new System.Drawing.Point(251, 163);
             this.tituloTxt.Name = "tituloTxt";
             this.tituloTxt.Size = new System.Drawing.Size(206, 20);
             this.tituloTxt.TabIndex = 7;
             // 
             // gravadoTxt
             // 
-            this.gravadoTxt.Location = new System.Drawing.Point(406, 162);
+            this.gravadoTxt.Location = new System.Drawing.Point(457, 163);
             this.gravadoTxt.Name = "gravadoTxt";
             this.gravadoTxt.Size = new System.Drawing.Size(115, 20);
             this.gravadoTxt.TabIndex = 8;
@@ -125,7 +124,7 @@ namespace CronogramaYoutube
             // 
             this.nada.AutoSize = true;
             this.nada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nada.Location = new System.Drawing.Point(91, 144);
+            this.nada.Location = new System.Drawing.Point(142, 145);
             this.nada.Name = "nada";
             this.nada.Size = new System.Drawing.Size(33, 15);
             this.nada.TabIndex = 9;
@@ -137,7 +136,7 @@ namespace CronogramaYoutube
             this.btn_limparlista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limparlista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limparlista.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_limparlista.Location = new System.Drawing.Point(700, 162);
+            this.btn_limparlista.Location = new System.Drawing.Point(578, 161);
             this.btn_limparlista.Name = "btn_limparlista";
             this.btn_limparlista.Size = new System.Drawing.Size(204, 21);
             this.btn_limparlista.TabIndex = 10;
@@ -145,23 +144,11 @@ namespace CronogramaYoutube
             this.btn_limparlista.UseVisualStyleBackColor = false;
             this.btn_limparlista.Click += new System.EventHandler(this.btn_limparlista_Click);
             // 
-            // ListaID
-            // 
-            this.ListaID.FullRowSelect = true;
-            this.ListaID.GridLines = true;
-            this.ListaID.HideSelection = false;
-            this.ListaID.Location = new System.Drawing.Point(12, 189);
-            this.ListaID.Name = "ListaID";
-            this.ListaID.Size = new System.Drawing.Size(50, 218);
-            this.ListaID.TabIndex = 11;
-            this.ListaID.UseCompatibleStateImageBehavior = false;
-            this.ListaID.View = System.Windows.Forms.View.Details;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(151, 144);
+            this.label1.Location = new System.Drawing.Point(202, 145);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 15);
             this.label1.TabIndex = 12;
@@ -171,7 +158,7 @@ namespace CronogramaYoutube
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(258, 144);
+            this.label2.Location = new System.Drawing.Point(309, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 15);
             this.label2.TabIndex = 13;
@@ -181,7 +168,7 @@ namespace CronogramaYoutube
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(406, 144);
+            this.label3.Location = new System.Drawing.Point(457, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 15);
             this.label3.TabIndex = 14;
@@ -196,7 +183,6 @@ namespace CronogramaYoutube
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ListaID);
             this.Controls.Add(this.btn_limparlista);
             this.Controls.Add(this.nada);
             this.Controls.Add(this.gravadoTxt);
@@ -227,7 +213,6 @@ namespace CronogramaYoutube
         private System.Windows.Forms.Label nada;
         private System.Windows.Forms.Button btn_limparlista;
         public System.Windows.Forms.ListView Lista;
-        private System.Windows.Forms.ListView ListaID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

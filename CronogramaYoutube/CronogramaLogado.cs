@@ -24,9 +24,8 @@ namespace CronogramaYoutube
         // MÉTODO PARA GERAR OS ITENS DAS COLUNAS
         private void GerarColunas()
         {
-            // COLUNA DA LIST VIEW DO ID
-            ListaID.Columns.Add("", 50).TextAlign = HorizontalAlignment.Center;
-            // COLUNA DA LIST VIEW DO RESTANTE
+            // ADIÇÃO DAS COLUNAS DO LIST VIEW, A ONDE TÁ AS ASPAS, É ONDE PODEMOS COLOCAR OS NOMES DAS COLUNAS...
+            Lista.Columns.Add("ID", 50).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 200).TextAlign = HorizontalAlignment.Center;
@@ -46,16 +45,11 @@ namespace CronogramaYoutube
 
         }
 
-        private void RemoverItemsListView()
-        {
-            
-        }
-
         // Método para adicionar os items na List view
         private void MetodoAddItem()
         {
             // Criando array
-            string[] item = new string[4];
+            string[] item = new string[5];
 
             if (dataTxt.Text != "" && horaTxt.Text != "" && tituloTxt.Text != "" && gravadoTxt.Text != "")
             {
@@ -63,15 +57,15 @@ namespace CronogramaYoutube
                 // Veja que o contador é = Total de itens na coluna ID + 1
                 // Na sequencia converto ele para string para ser implementado na coluna
                 // E assim repete o looping
-                int contadorID = ListaID.Items.Count + 1;
+                int contadorID = Lista.Items.Count + 1;
                 string contadorIDString = contadorID.ToString();
-                ListaID.Items.Add(new ListViewItem(contadorIDString));
 
                 // Add dados informados pelo user no array
-                item[0] = dataTxt.Text;
-                item[1] = horaTxt.Text;
-                item[2] = tituloTxt.Text;
-                item[3] = gravadoTxt.Text;
+                item[0] = contadorIDString;
+                item[1] = dataTxt.Text;
+                item[2] = horaTxt.Text;
+                item[3] = tituloTxt.Text;
+                item[4] = gravadoTxt.Text;
 
                 // Passando array para o List view
                 Lista.Items.Add(new ListViewItem(item));
@@ -84,13 +78,18 @@ namespace CronogramaYoutube
             }
         }
 
-        private void btn_limparlista_Click(object sender, EventArgs e)
+        // método para limpar lista selecionando o item
+        public void btn_limparlista_Click(object sender, EventArgs e)
         {
+            // Se tiver mais de zero itens adicionados na lista
             if (Lista.Items.Count > 0)
             {
+                // deleta o item na posição 0 já vai todos (tanto da Lista quanto ListaID)
                 Lista.Items.Remove(Lista.SelectedItems[0]);
+                
             }
         }
 
+        
     }
 }
