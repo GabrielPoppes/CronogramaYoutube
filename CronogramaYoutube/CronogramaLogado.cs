@@ -30,8 +30,9 @@ namespace CronogramaYoutube
             Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 200).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 100).TextAlign = HorizontalAlignment.Center;
-
+            // Ativar o checkbox nas colunas
             Lista.CheckBoxes = true;
+            // Permitir a multi seleção dos check boxs
             Lista.MultiSelect = true;
         }
 
@@ -84,11 +85,19 @@ namespace CronogramaYoutube
         // método para limpar lista selecionando o item
         public void btn_limparlista_Click(object sender, EventArgs e)
         {
+            // Percorre toda a Listview (onde estão os itens e colunas)
             foreach(ListViewItem item in Lista.Items)
             {
+                // Se um dos itens estiver checado
                 if (item.Checked)
                 {
+                    // Remove o item checado, index == posição do item checado
                     Lista.Items.RemoveAt(item.Index);
+                }
+
+                else
+                {
+                    MessageBox.Show("Selecione um item para ser removido!");
                 }
             }
         }
