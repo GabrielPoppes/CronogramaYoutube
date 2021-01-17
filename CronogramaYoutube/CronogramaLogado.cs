@@ -26,7 +26,7 @@ namespace CronogramaYoutube
         {
             // ADIÇÃO DAS COLUNAS DO LIST VIEW, A ONDE TÁ AS ASPAS, É ONDE PODEMOS COLOCAR OS NOMES DAS COLUNAS...
             Lista.Columns.Add("ID", 50).TextAlign = HorizontalAlignment.Center;
-            Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
+            Lista.Columns.Add("", 80).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 60).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 200).TextAlign = HorizontalAlignment.Center;
             Lista.Columns.Add("", 100).TextAlign = HorizontalAlignment.Center;
@@ -103,6 +103,7 @@ namespace CronogramaYoutube
             }
         }
 
+        // Só é permitido que o usuário digite no máximo 3 caracteres no campo GRAVADO
         private void gravadoTxt_TextChanged(object sender, EventArgs e)
         {
             gravadoTxt.MaxLength = 3;
