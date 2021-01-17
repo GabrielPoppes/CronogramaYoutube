@@ -34,7 +34,6 @@ namespace CronogramaYoutube
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cadastrar = new System.Windows.Forms.Button();
             this.Lista = new System.Windows.Forms.ListView();
-            this.horaTxt = new System.Windows.Forms.TextBox();
             this.tituloTxt = new System.Windows.Forms.TextBox();
             this.gravadoTxt = new System.Windows.Forms.TextBox();
             this.nada = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@ namespace CronogramaYoutube
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataMasked = new System.Windows.Forms.MaskedTextBox();
+            this.maskHora = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,13 +92,6 @@ namespace CronogramaYoutube
             this.Lista.UseCompatibleStateImageBehavior = false;
             this.Lista.View = System.Windows.Forms.View.Details;
             // 
-            // horaTxt
-            // 
-            this.horaTxt.Location = new System.Drawing.Point(192, 163);
-            this.horaTxt.Name = "horaTxt";
-            this.horaTxt.Size = new System.Drawing.Size(62, 20);
-            this.horaTxt.TabIndex = 6;
-            // 
             // tituloTxt
             // 
             this.tituloTxt.Location = new System.Drawing.Point(251, 163);
@@ -112,6 +105,7 @@ namespace CronogramaYoutube
             this.gravadoTxt.Name = "gravadoTxt";
             this.gravadoTxt.Size = new System.Drawing.Size(115, 20);
             this.gravadoTxt.TabIndex = 8;
+            this.gravadoTxt.TextChanged += new System.EventHandler(this.gravadoTxt_TextChanged);
             // 
             // nada
             // 
@@ -169,12 +163,21 @@ namespace CronogramaYoutube
             // 
             // dataMasked
             // 
-            this.dataMasked.Location = new System.Drawing.Point(129, 163);
+            this.dataMasked.Location = new System.Drawing.Point(127, 163);
             this.dataMasked.Mask = "00/00/0000";
             this.dataMasked.Name = "dataMasked";
             this.dataMasked.Size = new System.Drawing.Size(64, 20);
             this.dataMasked.TabIndex = 15;
             this.dataMasked.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskHora
+            // 
+            this.maskHora.Location = new System.Drawing.Point(190, 163);
+            this.maskHora.Mask = "90:00";
+            this.maskHora.Name = "maskHora";
+            this.maskHora.Size = new System.Drawing.Size(62, 20);
+            this.maskHora.TabIndex = 16;
+            this.maskHora.ValidatingType = typeof(System.DateTime);
             // 
             // CronogramaLogado
             // 
@@ -182,6 +185,7 @@ namespace CronogramaYoutube
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(936, 477);
+            this.Controls.Add(this.maskHora);
             this.Controls.Add(this.dataMasked);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -190,7 +194,6 @@ namespace CronogramaYoutube
             this.Controls.Add(this.nada);
             this.Controls.Add(this.gravadoTxt);
             this.Controls.Add(this.tituloTxt);
-            this.Controls.Add(this.horaTxt);
             this.Controls.Add(this.Lista);
             this.Controls.Add(this.btn_cadastrar);
             this.Controls.Add(this.pictureBox1);
@@ -208,7 +211,6 @@ namespace CronogramaYoutube
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_cadastrar;
-        private System.Windows.Forms.TextBox horaTxt;
         private System.Windows.Forms.TextBox tituloTxt;
         private System.Windows.Forms.TextBox gravadoTxt;
         private System.Windows.Forms.Label nada;
@@ -218,5 +220,6 @@ namespace CronogramaYoutube
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox dataMasked;
+        private System.Windows.Forms.MaskedTextBox maskHora;
     }
 }

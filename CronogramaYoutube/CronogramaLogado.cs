@@ -39,7 +39,7 @@ namespace CronogramaYoutube
         // Botão "CADASTRAR"
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataMasked.Text == "" || horaTxt.Text == "" || tituloTxt.Text == "" || gravadoTxt.Text == "")
+            if (dataMasked.Text == "" || maskHora.Text == "" || tituloTxt.Text == "" || gravadoTxt.Text == "")
             {
                 MessageBox.Show("Por favor, preencha todos os campos!");
             }
@@ -55,7 +55,7 @@ namespace CronogramaYoutube
             // Criando array
             string[] item = new string[5];
 
-            if (dataMasked.Text != "" && horaTxt.Text != "" && tituloTxt.Text != "" && gravadoTxt.Text != "")
+            if (dataMasked.Text != "" && maskHora.Text != "" && tituloTxt.Text != "" && gravadoTxt.Text != "")
             {
                 // Lógica para implementar o contador da coluna "ID"
                 // Veja que o contador é = Total de itens na coluna ID + 1
@@ -67,7 +67,7 @@ namespace CronogramaYoutube
                 // Add dados informados pelo user no array
                 item[0] = contadorIDString;
                 item[1] = dataMasked.Text;
-                item[2] = horaTxt.Text;
+                item[2] = maskHora.Text;
                 item[3] = tituloTxt.Text;
                 item[4] = gravadoTxt.Text;
 
@@ -76,7 +76,7 @@ namespace CronogramaYoutube
 
                 // Limpar a List View
                 dataMasked.Clear();
-                horaTxt.Clear();
+                maskHora.Clear();
                 tituloTxt.Clear();
                 gravadoTxt.Clear();
             }
@@ -101,6 +101,11 @@ namespace CronogramaYoutube
                     MessageBox.Show("Selecione um item para ser removido!");
                 }
             }
+        }
+
+        private void gravadoTxt_TextChanged(object sender, EventArgs e)
+        {
+            gravadoTxt.MaxLength = 3;
         }
     }
 }
