@@ -10,8 +10,8 @@ using System.Windows.Forms;
 
 namespace CronogramaYoutube
 {
-    // pendencias:
-    // 1. adicionar id de item por item para saber quantos tem
+    // pendencias
+    // organizar os itens da list view por data
     public partial class CronogramaLogado : Form
     {
         public CronogramaLogado()
@@ -39,7 +39,7 @@ namespace CronogramaYoutube
         // Botão "CADASTRAR"
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataTxt.Text == "" || horaTxt.Text == "" || tituloTxt.Text == "" || gravadoTxt.Text == "")
+            if (dataMasked.Text == "" || horaTxt.Text == "" || tituloTxt.Text == "" || gravadoTxt.Text == "")
             {
                 MessageBox.Show("Por favor, preencha todos os campos!");
             }
@@ -55,7 +55,7 @@ namespace CronogramaYoutube
             // Criando array
             string[] item = new string[5];
 
-            if (dataTxt.Text != "" && horaTxt.Text != "" && tituloTxt.Text != "" && gravadoTxt.Text != "")
+            if (dataMasked.Text != "" && horaTxt.Text != "" && tituloTxt.Text != "" && gravadoTxt.Text != "")
             {
                 // Lógica para implementar o contador da coluna "ID"
                 // Veja que o contador é = Total de itens na coluna ID + 1
@@ -66,7 +66,7 @@ namespace CronogramaYoutube
 
                 // Add dados informados pelo user no array
                 item[0] = contadorIDString;
-                item[1] = dataTxt.Text;
+                item[1] = dataMasked.Text;
                 item[2] = horaTxt.Text;
                 item[3] = tituloTxt.Text;
                 item[4] = gravadoTxt.Text;
@@ -75,7 +75,7 @@ namespace CronogramaYoutube
                 Lista.Items.Add(new ListViewItem(item));
 
                 // Limpar a List View
-                dataTxt.Clear();
+                dataMasked.Clear();
                 horaTxt.Clear();
                 tituloTxt.Clear();
                 gravadoTxt.Clear();
@@ -95,13 +95,12 @@ namespace CronogramaYoutube
                     Lista.Items.RemoveAt(item.Index);
                 }
 
+                // caso nenhum item seja selecionado, exibe alerta de erro para o usuário
                 else
                 {
                     MessageBox.Show("Selecione um item para ser removido!");
                 }
             }
         }
-
-        
     }
 }
