@@ -43,6 +43,7 @@ namespace CronogramaYoutube
             this.label3 = new System.Windows.Forms.Label();
             this.dataMasked = new System.Windows.Forms.MaskedTextBox();
             this.maskHora = new System.Windows.Forms.MaskedTextBox();
+            this.labelWelcome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,12 +180,22 @@ namespace CronogramaYoutube
             this.maskHora.TabIndex = 16;
             this.maskHora.ValidatingType = typeof(System.DateTime);
             // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Location = new System.Drawing.Point(4, 107);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(97, 13);
+            this.labelWelcome.TabIndex = 17;
+            this.labelWelcome.Text = "label welcome user";
+            // 
             // CronogramaLogado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(936, 477);
+            this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.maskHora);
             this.Controls.Add(this.dataMasked);
             this.Controls.Add(this.label3);
@@ -221,5 +232,6 @@ namespace CronogramaYoutube
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox dataMasked;
         private System.Windows.Forms.MaskedTextBox maskHora;
+        public System.Windows.Forms.Label labelWelcome;
     }
 }

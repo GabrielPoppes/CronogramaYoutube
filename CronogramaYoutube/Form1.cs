@@ -32,7 +32,7 @@ namespace CronogramaYoutube
         }
 
         // Codificação do botão "ENTRAR", checa se os campos de login e senha estão preenchidos corretamente
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             if (btn_login.Text == "" && btn_senha.Text == "")
             {
@@ -54,21 +54,26 @@ namespace CronogramaYoutube
                 // Codificação para abrir nova tela
                 Logado = new Thread(FormLogado);
                 Logado.SetApartmentState(ApartmentState.STA);
+
+
+                string nomeusuario = btn_login.Text;
+                CronogramaLogado nome = new CronogramaLogado(nomeusuario);
+
                 // "this.Close() fecha a tela anterior, e mantém somente a nova aberta"
                 this.Close();
                 // Abre a nova tela
                 Logado.Start();
-
-                
             }
 
-            
         }
+
         // Método para abrir a nova tela
         private void FormLogado()
         {
-            Application.Run(new CronogramaLogado());
+            Application.Run(new CronogramaLogado(btn_login.Text));
         }
+
+
 
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CronogramaYoutube;
+using CronogramaYoutube.Properties;
 
 namespace CronogramaYoutube
 {
@@ -14,11 +16,20 @@ namespace CronogramaYoutube
     // organizar os itens da list view por data
     public partial class CronogramaLogado : Form
     {
-        public CronogramaLogado()
+        public string Username { get; set; }
+        public CronogramaLogado(string username)
         {
             InitializeComponent();
+            Username = username;
+            labelWelcome.Text = $"Seja bem-vindo(a) {username}";
             // Método para gerar as colunas assim que a tela é aberta
             GerarColunas();
+        }
+
+
+        public void Welcome(string User)
+        {
+            
         }
 
         // MÉTODO PARA GERAR OS ITENS DAS COLUNAS

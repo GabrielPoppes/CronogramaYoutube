@@ -169,11 +169,11 @@ namespace CronogramaYoutube
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox btn_login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox btn_senha;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox btn_login;
     }
 }
 
