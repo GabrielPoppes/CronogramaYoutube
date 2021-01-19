@@ -31,6 +31,15 @@ namespace CronogramaYoutube
             Application.Exit();
         }
 
+        // criei o nomeusuario de modo público e sem valor (ele quem vai receber o valor do TxtBox com nome do user)
+        public string nomeusuario = "";
+
+        // Método para abrir a nova tela
+        private void FormLogado()
+        {
+            Application.Run(new CronogramaLogado(this));
+        }
+
         // Codificação do botão "ENTRAR", checa se os campos de login e senha estão preenchidos corretamente
         public void button1_Click(object sender, EventArgs e)
         {
@@ -55,9 +64,10 @@ namespace CronogramaYoutube
                 Logado = new Thread(FormLogado);
                 Logado.SetApartmentState(ApartmentState.STA);
 
-
-                string nomeusuario = btn_login.Text;
-                CronogramaLogado nome = new CronogramaLogado(nomeusuario);
+                // Atribuindo valor a variável "nomeusuariO" que recebe o nome do user digitado no TxtBox
+                nomeusuario = btn_login.Text;
+                // Instaciando a tela após logar, passando o valor "this" que se refere ao Form1, tela de login
+                CronogramaLogado nome = new CronogramaLogado(this);
 
                 // "this.Close() fecha a tela anterior, e mantém somente a nova aberta"
                 this.Close();
@@ -67,11 +77,7 @@ namespace CronogramaYoutube
 
         }
 
-        // Método para abrir a nova tela
-        private void FormLogado()
-        {
-            Application.Run(new CronogramaLogado(btn_login.Text));
-        }
+
 
 
 

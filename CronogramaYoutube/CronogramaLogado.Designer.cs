@@ -183,7 +183,7 @@ namespace CronogramaYoutube
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
-            this.labelWelcome.Location = new System.Drawing.Point(4, 107);
+            this.labelWelcome.Location = new System.Drawing.Point(1, 110);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(97, 13);
             this.labelWelcome.TabIndex = 17;

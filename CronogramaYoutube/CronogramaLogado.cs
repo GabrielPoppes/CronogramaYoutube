@@ -16,12 +16,12 @@ namespace CronogramaYoutube
     // organizar os itens da list view por data
     public partial class CronogramaLogado : Form
     {
-        public string Username { get; set; }
-        public CronogramaLogado(string username)
+        // Adicionamos que a classe recebe um valor chamado "form1" do tipo "Form1". "Form1" é a classe da tela de login
+        public CronogramaLogado(Form1 form1)
         {
             InitializeComponent();
-            Username = username;
-            labelWelcome.Text = $"Seja bem-vindo(a) {username}";
+            // Para chamar o "nomeusuario" basta colocar "form1" na frente
+            labelWelcome.Text = $"Seja bem-vindo(a) {form1.nomeusuario}";
             // Método para gerar as colunas assim que a tela é aberta
             GerarColunas();
         }
