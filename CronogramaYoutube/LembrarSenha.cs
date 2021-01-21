@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CronogramaYoutube
 {
     public partial class LembrarSenha : Form
     {
+        Thread telalogin;
         public LembrarSenha()
         {
             InitializeComponent();
@@ -28,6 +30,19 @@ namespace CronogramaYoutube
             {
                 MessageBox.Show("Foi enviado um link de recuperação de senha para o e-mail!");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            telalogin = new Thread(AbrirLogin);
+            telalogin.SetApartmentState(ApartmentState.MTA);
+            this.Close();
+            telalogin.Start();
+        }
+
+        private void AbrirLogin()
+        {
+            Application.Run(new Form1());
         }
     }
 }

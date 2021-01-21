@@ -36,6 +36,7 @@ namespace CronogramaYoutube
             this.label1 = new System.Windows.Forms.Label();
             this.btn_recuperarsenha = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,12 +100,26 @@ namespace CronogramaYoutube
             this.label2.TabIndex = 6;
             this.label2.Text = "Para recuperar a senha do sistema, digite o e-mail cadastrado no seu usuário";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightCoral;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(304, 299);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 39);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "VOLTAR";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // LembrarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_recuperarsenha);
             this.Controls.Add(this.label1);
@@ -127,5 +142,6 @@ namespace CronogramaYoutube
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_recuperarsenha;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }

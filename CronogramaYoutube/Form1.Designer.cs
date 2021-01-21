@@ -60,10 +60,10 @@ namespace CronogramaYoutube
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightCoral;
+            this.button2.BackColor = System.Drawing.Color.DarkSalmon;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(713, 415);
+            this.button2.Location = new System.Drawing.Point(713, 470);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -141,7 +141,7 @@ namespace CronogramaYoutube
             // 
             // btn_recuperarsenha
             // 
-            this.btn_recuperarsenha.BackColor = System.Drawing.Color.Brown;
+            this.btn_recuperarsenha.BackColor = System.Drawing.Color.LightCoral;
             this.btn_recuperarsenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_recuperarsenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_recuperarsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
