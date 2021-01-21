@@ -44,6 +44,7 @@ namespace CronogramaYoutube
             this.dataMasked = new System.Windows.Forms.MaskedTextBox();
             this.maskHora = new System.Windows.Forms.MaskedTextBox();
             this.labelWelcome = new System.Windows.Forms.Label();
+            this.btn_Voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,12 +190,26 @@ namespace CronogramaYoutube
             this.labelWelcome.TabIndex = 17;
             this.labelWelcome.Text = "label welcome user";
             // 
+            // btn_Voltar
+            // 
+            this.btn_Voltar.BackColor = System.Drawing.Color.LightCoral;
+            this.btn_Voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Voltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Voltar.Location = new System.Drawing.Point(835, 431);
+            this.btn_Voltar.Name = "btn_Voltar";
+            this.btn_Voltar.Size = new System.Drawing.Size(76, 34);
+            this.btn_Voltar.TabIndex = 18;
+            this.btn_Voltar.Text = "VOLTAR";
+            this.btn_Voltar.UseVisualStyleBackColor = false;
+            this.btn_Voltar.Click += new System.EventHandler(this.btn_Voltar_Click);
+            // 
             // CronogramaLogado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(936, 477);
+            this.Controls.Add(this.btn_Voltar);
             this.Controls.Add(this.labelWelcome);
             this.Controls.Add(this.maskHora);
             this.Controls.Add(this.dataMasked);
@@ -233,5 +248,6 @@ namespace CronogramaYoutube
         private System.Windows.Forms.MaskedTextBox dataMasked;
         private System.Windows.Forms.MaskedTextBox maskHora;
         public System.Windows.Forms.Label labelWelcome;
+        private System.Windows.Forms.Button btn_Voltar;
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CronogramaYoutube;
 using CronogramaYoutube.Properties;
+using System.Threading;
 
 namespace CronogramaYoutube
 {
@@ -16,6 +17,9 @@ namespace CronogramaYoutube
     // organizar os itens da list view por data
     public partial class CronogramaLogado : Form
     {
+        // Thread da tela de login
+        Thread telalogin;
+
         // Adicionamos que a classe recebe um valor chamado "form1" do tipo "Form1". "Form1" é a classe da tela de login
         public CronogramaLogado(Form1 form1)
         {
@@ -118,6 +122,20 @@ namespace CronogramaYoutube
         private void gravadoTxt_TextChanged(object sender, EventArgs e)
         {
             gravadoTxt.MaxLength = 3;
+        }
+
+        // Botão voltar para tela de login
+        private void btn_Voltar_Click(object sender, EventArgs e)
+        {
+            telalogin = new Thread(AbrirLogin);
+            telalogin.SetApartmentState(ApartmentState.MTA);
+            this.Close();
+            telalogin.Start();
+        }
+
+        private void AbrirLogin()
+        {
+            Application.Run(new Form1());
         }
     }
 }
