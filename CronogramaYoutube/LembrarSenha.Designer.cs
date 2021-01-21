@@ -87,6 +87,7 @@ namespace CronogramaYoutube
             this.btn_recuperarsenha.TabIndex = 5;
             this.btn_recuperarsenha.Text = "RECUPERAR SENHA";
             this.btn_recuperarsenha.UseVisualStyleBackColor = false;
+            this.btn_recuperarsenha.Click += new System.EventHandler(this.btn_recuperarsenha_Click);
             // 
             // label2
             // 

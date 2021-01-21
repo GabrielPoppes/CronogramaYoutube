@@ -16,5 +16,18 @@ namespace CronogramaYoutube
         {
             InitializeComponent();
         }
+
+        private void btn_recuperarsenha_Click(object sender, EventArgs e)
+        {
+            if (txtBox_email.Text == "")
+            {
+                MessageBox.Show("Por favor, digite seu e-mail!");
+            }
+
+            else
+            {
+                MessageBox.Show("Foi enviado um link de recuperação de senha para o e-mail!");
+            }
+        }
     }
 }
