@@ -39,6 +39,7 @@ namespace CronogramaYoutube
             this.label2 = new System.Windows.Forms.Label();
             this.btn_senha = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_recuperarsenha = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -49,9 +50,9 @@ namespace CronogramaYoutube
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(340, 317);
+            this.button1.Location = new System.Drawing.Point(292, 317);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 40);
+            this.button1.Size = new System.Drawing.Size(219, 40);
             this.button1.TabIndex = 1;
             this.button1.Text = "ENTRAR";
             this.button1.UseVisualStyleBackColor = false;
@@ -94,9 +95,9 @@ namespace CronogramaYoutube
             // 
             this.btn_login.BackColor = System.Drawing.SystemColors.Window;
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(340, 217);
+            this.btn_login.Location = new System.Drawing.Point(292, 217);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(115, 22);
+            this.btn_login.Size = new System.Drawing.Size(219, 22);
             this.btn_login.TabIndex = 5;
             // 
             // label1
@@ -122,21 +123,34 @@ namespace CronogramaYoutube
             // btn_senha
             // 
             this.btn_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_senha.Location = new System.Drawing.Point(340, 273);
+            this.btn_senha.Location = new System.Drawing.Point(292, 273);
             this.btn_senha.Name = "btn_senha";
             this.btn_senha.PasswordChar = '*';
-            this.btn_senha.Size = new System.Drawing.Size(115, 22);
+            this.btn_senha.Size = new System.Drawing.Size(219, 22);
             this.btn_senha.TabIndex = 8;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(152, 217);
+            this.pictureBox2.Location = new System.Drawing.Point(99, 217);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(144, 140);
+            this.pictureBox2.Size = new System.Drawing.Size(176, 196);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            // 
+            // btn_recuperarsenha
+            // 
+            this.btn_recuperarsenha.BackColor = System.Drawing.Color.Brown;
+            this.btn_recuperarsenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_recuperarsenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_recuperarsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_recuperarsenha.Location = new System.Drawing.Point(292, 373);
+            this.btn_recuperarsenha.Name = "btn_recuperarsenha";
+            this.btn_recuperarsenha.Size = new System.Drawing.Size(219, 40);
+            this.btn_recuperarsenha.TabIndex = 10;
+            this.btn_recuperarsenha.Text = "ESQUECI MINHA SENHA";
+            this.btn_recuperarsenha.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -144,6 +158,7 @@ namespace CronogramaYoutube
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_recuperarsenha);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_senha);
             this.Controls.Add(this.label2);
@@ -174,6 +189,7 @@ namespace CronogramaYoutube
         private System.Windows.Forms.TextBox btn_senha;
         private System.Windows.Forms.PictureBox pictureBox2;
         public System.Windows.Forms.TextBox btn_login;
+        private System.Windows.Forms.Button btn_recuperarsenha;
     }
 }
 
