@@ -21,15 +21,29 @@ namespace CronogramaYoutube
 
         private void btn_recuperarsenha_Click(object sender, EventArgs e)
         {
-            if (txtBox_email.Text == "")
+            
+
+            // recebendo o e-mail digitado pelo usuário
+            string checar = txtBox_email.Text;
+
+            // checar se foi digitado @ e .com no e-mail
+            // veja que a var é do tipo boolean, resulta true ou false
+            bool valor = checar.Contains("@") && checar.Contains(".com");
+
+            // Se o valor for true (campo contem @ e .com, foi validado)
+            if (valor == true)
             {
-                MessageBox.Show("Por favor, digite seu e-mail!");
+                MessageBox.Show("Foi enviado um link de recuperação de senha para o e-mail!");
             }
 
             else
             {
-                MessageBox.Show("Foi enviado um link de recuperação de senha para o e-mail!");
+                MessageBox.Show("Por favor, digite um e-mail válido!");
             }
+
+
+            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
