@@ -13,8 +13,11 @@ namespace CronogramaYoutube
 {
     public partial class Form1 : Form
     {
-        // Thred da Tela "CronogramaLogado"
+        // Thread da Tela "CronogramaLogado"
         Thread Logado;
+        // Thread da tela LembrarSenha
+        Thread EsqueciSenha;
+
         public Form1()
         {
             InitializeComponent();
@@ -77,9 +80,17 @@ namespace CronogramaYoutube
 
         }
 
+        private void btn_recuperarsenha_Click(object sender, EventArgs e)
+        {
+            EsqueciSenha = new Thread(ResgatarSenhar);
+            EsqueciSenha.SetApartmentState(ApartmentState.MTA);
+            this.Close();
+            EsqueciSenha.Start();
+        }
 
-
-
-
+        public void ResgatarSenhar()
+        {
+            Application.Run(new LembrarSenha());
+        }
     }
 }

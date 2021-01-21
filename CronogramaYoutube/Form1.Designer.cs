@@ -151,13 +151,14 @@ namespace CronogramaYoutube
             this.btn_recuperarsenha.TabIndex = 10;
             this.btn_recuperarsenha.Text = "ESQUECI MINHA SENHA";
             this.btn_recuperarsenha.UseVisualStyleBackColor = false;
+            this.btn_recuperarsenha.Click += new System.EventHandler(this.btn_recuperarsenha_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 505);
             this.Controls.Add(this.btn_recuperarsenha);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_senha);
