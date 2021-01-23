@@ -23,11 +23,6 @@ namespace CronogramaYoutube
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         // Botão sair
         private void button2_Click(object sender, EventArgs e)
         {
@@ -42,10 +37,10 @@ namespace CronogramaYoutube
         {
             Application.Run(new CronogramaLogado(this));
         }
-
         // Codificação do botão "ENTRAR", checa se os campos de login e senha estão preenchidos corretamente
         public void button1_Click(object sender, EventArgs e)
         {
+
             if (btn_login.Text == "" && btn_senha.Text == "")
             {
                 MessageBox.Show("Por favor, insira os dados necessários para acessar o sistema!");
@@ -73,11 +68,12 @@ namespace CronogramaYoutube
                 CronogramaLogado nome = new CronogramaLogado(this);
 
                 // "this.Close() fecha a tela anterior, e mantém somente a nova aberta"
-                this.Close();
+                this.Visible = false;
                 // Abre a nova tela
                 Logado.Start();
-            }
 
+
+            }
         }
 
         private void btn_recuperarsenha_Click(object sender, EventArgs e)
@@ -92,5 +88,7 @@ namespace CronogramaYoutube
         {
             Application.Run(new LembrarSenha());
         }
+
+
     }
 }
